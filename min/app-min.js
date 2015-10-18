@@ -1,0 +1,1 @@
+var app=angular.module("druge",[]);app.controller("feed",["$scope","$http",function(e,o){o.jsonp("//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q="+encodeURIComponent("http://www.drudgesiren.com/allStories.xml")).success(function(o){e.stories=o.responseData.feed.entries}),e.loadStory=function(e){alert(e)}}]);
