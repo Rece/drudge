@@ -1,38 +1,52 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+
     	<meta name="viewport" content="initial-scale=1" />
 
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
 		<script type="text/javascript" src="app.js"></script>
 
 	</head>
-	<body ng-app="druge" ng-controller="feed" layout="column">
-		
-			<section layout="row" flex>
-				<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-		        	<md-toolbar class="md-theme-indigo">
-			        	<h1 class="md-toolbar-tools">Sidenav Left</h1>
-			      	</md-toolbar>
-		      
-			     	<div ng-repeat="story in stories">
-						<md-content layout-padding class="md-padding">
-						    <md-card ng-click="loadStory(story.link)">
-						      <md-card-content>
-						        <h2 class="md-title">{{story.title}}</h2>
-						      </md-card-content>
-						    </md-card>
-						</md-content>
-					</div>
-				</md-sidenav>
-		     
-			</section>
+	<body ng-app="druge" ng-controller="main">
+		<nav class="navbar navbar-custom">
+		  	<div class="container-fluid">
+				<a class="navbar-brand" target="_blank" href="https://chrome.google.com/webstore/detail/varmasterpiece/chfhddogiigmfpkcmgfpolalagdcamkl/related">
+			  		<span class="pad-left-s">A Better Druge</span>
+				</a>
 
-			<md-content class="md-padding">
-	              <div>kjnkjnsd</div>
-	            </md-content>
-		
+		  		<a class="probity pull-right" target="_blank" href="http://www.probitytechnology.com">
+					Probity Technology
+		  		</a>
+	    	</div>
+	    </nav>
+
+		<div class="container-fluid">
+			<div class="row">
+
+				<section class="sidebar col-sm-4">
+					<div class="row">
+						<div class="col-sm-12">
+							<h1>Druge Stories</h1>
+						</div>
+					</div>
+					
+			      	<div ng-repeat="story in stories">
+						<div class="row">
+							<div class="col-sm-12" ng-click="loadStory(story)">
+								<h2 class="md-title">{{story.title}}</h2>
+								{{story}}
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<iframe class="col-sm-8" id='article' src="{{iframeLink}}"></div>
+			</div>
+		</div>
 	</body>
 </html>
