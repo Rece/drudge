@@ -39,13 +39,12 @@
 						<div class="row">
 							<div class="col-sm-12" ng-click="loadStory(story)">
 								<h2 class="md-title">{{story.title}}</h2>
-								{{story}}
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<iframe class="col-sm-8" id='article' src="{{iframeLink}}"></div>
+				<div ng-bind-html="storyText" id='article'></div>
 			</div>
 		</div>
 	</body>
