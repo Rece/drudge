@@ -1,7 +1,67 @@
 @import palette
 
+//UTILITY CLASSES
+.pad-right-s
+	padding-right: 10px
 
+.pad-bottom-s
+	padding-bottom: 10px
 
-.nav-bar
-	color: $primary
-	border-bottom: 1px solid $dark
+.pad-top-m
+	padding-top: 30px
+
+.h100
+	height: calc(100vh - 50px)
+
+.scrollY
+	overflow-y: auto	
+
+.faded
+	color: rgba(0,0,0, .6)
+
+//DEFAULT OVERRIDE
+h3, 
+.h3 
+	margin-bottom: 20px
+
+//CUSTOM PAGE STYLING
+.navbar
+	background-color: $light
+	color: white
+	border-radius: 0
+	margin-bottom: 0
+
+	a,
+	a:active,
+	a:visited,
+	a:focus
+		color: white
+
+	.probity
+		padding: 15px
+
+.sidebar
+	.storyTitle
+		border-bottom: 1px solid #ccc
+
+		&.selected
+			border-left: 3px solid $light
+			padding-left: 12px	
+
+#article
+	.activeTitle 
+		background-color: $light
+		color: white
+
+		a,
+		a:active,
+		a:visited,
+		a:focus
+			color: white
+
+	.storyContent 
+		font-family: Georgia
+
+		p
+			font-size: 19px
+			line-height: 29px

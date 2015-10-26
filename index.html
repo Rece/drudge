@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
 
     	<meta name="viewport" content="initial-scale=1" />
@@ -27,24 +28,37 @@
 
 		<div class="container-fluid">
 			<div class="row">
-
-				<section class="sidebar col-sm-4">
-					<div class="row">
-						<div class="col-sm-12">
-							<h1>Druge Stories</h1>
-						</div>
-					</div>
+				<div class="col-sm-4 h100 scrollY">
 					
-			      	<div ng-repeat="story in stories">
-						<div class="row">
-							<div class="col-sm-12" ng-click="loadStory(story)">
-								<h2 class="md-title">{{story.title}}</h2>
+					<section class="sidebar">
+				      	<div ng-repeat="story in stories">
+							<div class="row">
+								<div class="col-sm-12 storyTitle" ng-click="loadStory(story)" ng-class="{selected: story == active}"s>
+									<h3 class="faded">{{story.title}}</h2>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+				<div class="col-sm-8 h100 scrollY">
+					
+					<div id='article'>
+						<div class="row activeTitle">
+							<div class="col-sm-12 pad-bottom-s">
+								<h4>{{active.title}}</h4>
+								<a target="_blank" ng-href="{{active.link}}"><i class="fa fa-external-link pad-right-s"></i>{{active.link}}</a>
+							</div>
+						</div>
+							<div class="col-sm-12">
+							
+								<div class="pad-top-m storyContent" ng-bind-html="storyText"></div>
+
 							</div>
 						</div>
 					</div>
-				</section>
 
-				<div ng-bind-html="storyText" id='article'></div>
+				</div>
 			</div>
 		</div>
 	</body>
