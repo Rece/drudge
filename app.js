@@ -1,6 +1,7 @@
 /* globals angular*/
 
 var rss = "http://www.drudgereportfeed.com/rss.xml";
+var contentSource = "http://localhost:3000/";
 var app = angular.module('druge', []);
 
 app.controller('main', [
@@ -16,7 +17,7 @@ app.controller('main', [
 		
 		$scope.loadStory = function(story) {
 			$scope.active = story;
-			$http.jsonp('http://localhost:3000/?callback=JSON_CALLBACK&url=' + encodeURIComponent($scope.active.link))
+			$http.jsonp(contentSource + '?callback=JSON_CALLBACK&url=' + encodeURIComponent($scope.active.link))
 				.success(function(data) {
 					$scope.storyText = $sce.trustAsHtml(data.html);
 				});
