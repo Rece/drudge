@@ -13,6 +13,9 @@ app.controller('main', [
 			.success(function(data){
 				$scope.stories = data.responseData.feed.entries;
 				$scope.loadStory(data.responseData.feed.entries[0]); //set the first story to active
+			})
+			.error(function() {
+				alert("was not able to parse the article :(");
 			});
 		
 		$scope.loadStory = function(story) {
