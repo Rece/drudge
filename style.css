@@ -8,14 +8,14 @@
 .pad-top-m {
   padding-top: 30px; }
 
+.pad-bottom-m {
+  padding-bottom: 30px; }
+
 .h100 {
   height: calc(100vh - 50px); }
 
 .scrollY {
   overflow-y: auto; }
-
-.faded {
-  color: rgba(0, 0, 0, 0.6); }
 
 h3,
 .h3 {
@@ -35,7 +35,8 @@ h3,
     padding: 15px; }
 
 .sidebar .storyTitle {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  color: rgba(0, 0, 0, 0.6); }
   .sidebar .storyTitle.selected {
     border-left: 3px solid #6787a2;
     padding-left: 12px; }

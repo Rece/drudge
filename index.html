@@ -28,20 +28,20 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-4 h100 scrollY">
+				<div class="col-xs-4 h100 scrollY">
 					
 					<section class="sidebar">
 				      	<div ng-repeat="story in stories">
 							<div class="row">
-								<div class="col-sm-12 storyTitle" ng-click="loadStory(story)" ng-class="{selected: story == active}"s>
-									<h3 class="faded">{{story.title}}</h2>
+								<div class="col-sm-12 storyTitle" ng-click="loadStory(story)" ng-class="{selected: story == active}">
+									<h3>{{story.title}}</h3>
 								</div>
 							</div>
 						</div>
 					</section>
 
 				</div>
-				<div class="col-sm-8 h100 scrollY">
+				<div class="col-xs-8 h100 scrollY">
 					
 					<div id='article'>
 						<div class="row activeTitle">
@@ -52,7 +52,7 @@
 						</div>
 							<div class="col-sm-12">
 							
-								<div class="pad-top-m storyContent" ng-bind-html="storyText"></div>
+								<div class="pad-top-m pad-bottom-m storyContent" ng-bind-html="storyText"></div>
 
 							</div>
 						</div>
