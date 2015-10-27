@@ -1,5 +1,8 @@
 @import palette
 
+$bootstrapDefaultPadding: 15px
+$activeIndicatorWidth: 3px
+
 //UTILITY CLASSES
 .pad-right-s
 	padding-right: 10px
@@ -10,7 +13,7 @@
 .pad-top-m
 	padding-top: 30px
 
-.pad-bottom-m 
+.pad-bottom-m
 	padding-bottom: 30px
 
 .h100
@@ -46,8 +49,9 @@ h3,
 		color: rgba(0,0,0, .6)
 
 		&.selected
-			border-left: 3px solid $light
-			padding-left: 12px	
+			border-left: $activeIndicatorWidth solid $light
+			padding-left: $bootstrapDefaultPadding - $activeIndicatorWidth
+			color: black
 
 #article
 	.activeTitle 

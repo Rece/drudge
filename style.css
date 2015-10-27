@@ -39,7 +39,8 @@ h3,
   color: rgba(0, 0, 0, 0.6); }
   .sidebar .storyTitle.selected {
     border-left: 3px solid #6787a2;
-    padding-left: 12px; }
+    padding-left: 12px;
+    color: black; }
 
 #article .activeTitle {
   background-color: #6787a2;
