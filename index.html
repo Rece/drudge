@@ -32,7 +32,7 @@
 					
 					<section class="sidebar">
 				      	<div ng-repeat="story in stories">
-							<div class="row">
+							<div class="row pointer">
 								<div class="col-sm-12 storyTitle" ng-click="loadStory(story)" ng-class="{selected: story == active}">
 									<h3>{{story.title}}</h3>
 								</div>
@@ -52,7 +52,7 @@
 						</div>
 							<div class="col-sm-12">
 							
-								<div class="pad-top-m pad-bottom-m storyContent" ng-bind-html="storyText"></div>
+								<div class="pad-top-m pad-bottom-m storyContent" ng-bind-html="storyText">a</div>
 
 							</div>
 						</div>
