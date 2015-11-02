@@ -1,4 +1,4 @@
-/* globals angular, alert, console*/
+/* globals angular, alert*/
 
 var rss = "http://www.drudgereportfeed.com/rss.xml";
 var contentSource = "http://localhost:3000/";
@@ -34,8 +34,12 @@ app.controller('main', [
 			}
 		];
 		$scope.startOnboarding = function() {
+			//onboarding can get messed up if you are not at top.
+			var scrolls = document.getElementsByClassName("scrollY");
+			for (var i = 0; i < scrolls.length; i ++) {
+				scrolls[i].scrollTop = 0;
+			}
 			$scope.onboarding = true;
-			console.log("started");
 		};
 
 		$scope.loadStories = function() {
