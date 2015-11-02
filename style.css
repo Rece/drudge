@@ -73,9 +73,16 @@ h3,
     color: white; }
 #article .storyContent {
   font-family: Georgia; }
+  #article .storyContent * {
+    max-width: 100%; }
   #article .storyContent p {
     font-size: 19px;
     line-height: 29px; }
+  #article .storyContent img[src^="/"] {
+    display: none; }
+  #article .storyContent input,
+  #article .storyContent textarea {
+    display: none; }
 #article #loading {
   height: 50px;
   width: 50px;

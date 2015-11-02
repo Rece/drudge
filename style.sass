@@ -88,11 +88,25 @@ h3,
 			color: white
 
 	.storyContent 
+		//styling for the story we recieve
 		font-family: Georgia
+
+		*
+			max-width: 100% //don't let anything in the article be larger than the article
 
 		p
 			font-size: 19px
 			line-height: 29px
+
+		img 
+			
+
+			&[src^="/"]  //if the source is an absolute url, the image load will fail, so lets hide it
+				display: none
+		
+		input,
+		textarea
+			display: none //we want this thing to be clean, so lets hide input fields
 
 	#loading 
 		height: 50px
