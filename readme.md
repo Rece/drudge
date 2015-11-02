@@ -4,9 +4,10 @@ There is a news curation site called [Drudge Report](http://www.drudgereport.com
 
 ##Give me the Specs!
  * This is a MEAN(ish) site. 
- * We have an angular front end
+ * We have an angular front end.
  * Bootstrap for our css framework. 
- * There is one little css animation that I'm pulling from [animate.css](https://daneden.github.io/animate.css/)
+ * There is one little css animation that I'm pulling from [animate.css](https://daneden.github.io/animate.css/).
+ * There are a couple of [font awesome](https://fortawesome.github.io/Font-Awesome/) icons in here as well.
  * I'm using [ng-onboarding](https://github.com/adamalbrecht/ngOnboarding) for my onboarding tutorial.
  * The backend is Node with Express, but there is really only 1 page, so it hardly counts.
  * The reason it is only MEAN(ish) is because we don't have a MongoDB database (we just don't have a database).
