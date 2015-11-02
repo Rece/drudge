@@ -2,6 +2,9 @@
 .pad-right-s {
   padding-right: 10px; }
 
+.pad-top-s {
+  padding-top: 10px; }
+
 .pad-bottom-s {
   padding-bottom: 10px; }
 
@@ -10,6 +13,12 @@
 
 .pad-bottom-m {
   padding-bottom: 30px; }
+
+.no-pad-left {
+  padding-left: 0px !important; }
+
+.no-pad-right {
+  padding-right: 0px !important; }
 
 .h100 {
   height: calc(100vh - 50px); }
@@ -36,17 +45,23 @@ h3,
     color: white; }
   .navbar .probity {
     padding: 15px; }
+  .navbar .drudge {
+    font-size: 18px;
+    padding: 12px; }
 
+.sidebar .storyListData {
+  color: white;
+  background-color: #2e4952; }
 .sidebar .storyTitle {
   border-bottom: 1px solid #ccc;
   color: rgba(0, 0, 0, 0.6); }
   .sidebar .storyTitle.selected {
-    border-left: 3px solid #6787a2;
-    padding-left: 12px;
+    border-left: 5px solid #6787a2;
+    padding-left: 10px;
     color: black; }
 
 #article .activeTitle {
-  background-color: #6787a2;
+  background-color: #2e4952;
   color: white; }
   #article .activeTitle a,
   #article .activeTitle a:active,
@@ -58,3 +73,9 @@ h3,
   #article .storyContent p {
     font-size: 19px;
     line-height: 29px; }
+#article #loading {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  margin: 20px auto;
+  color: #6787a2; }

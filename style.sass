@@ -1,11 +1,14 @@
 @import palette
 
 $bootstrapDefaultPadding: 15px
-$activeIndicatorWidth: 3px
+$activeIndicatorWidth: 5px
 
 //UTILITY CLASSES
 .pad-right-s
 	padding-right: 10px
+
+.pad-top-s
+	padding-top: 10px
 
 .pad-bottom-s
 	padding-bottom: 10px
@@ -15,6 +18,12 @@ $activeIndicatorWidth: 3px
 
 .pad-bottom-m
 	padding-bottom: 30px
+
+.no-pad-left
+	padding-left: 0px !important
+
+.no-pad-right
+	padding-right: 0px !important
 
 .h100
 	height: calc(100vh - 50px)
@@ -46,7 +55,15 @@ h3,
 	.probity
 		padding: 15px
 
+	.drudge
+		font-size: 18px
+		padding: 12px
+
 .sidebar
+	.storyListData
+		color: white
+		background-color: $dark
+
 	.storyTitle
 		border-bottom: 1px solid #ccc
 		color: rgba(0,0,0, .6)
@@ -58,7 +75,7 @@ h3,
 
 #article
 	.activeTitle 
-		background-color: $light
+		background-color: $dark
 		color: white
 
 		a,
@@ -73,3 +90,10 @@ h3,
 		p
 			font-size: 19px
 			line-height: 29px
+
+	#loading 
+		height: 50px
+		width: 50px
+		font-size: 50px
+		margin: 20px auto
+		color: $light
