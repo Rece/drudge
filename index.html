@@ -2,38 +2,48 @@
 	<head>
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+		<link rel="stylesheet" href="ng-onboarding/ng-onboarding.css">
 		<link rel="stylesheet" href="style.css">
 
     	<meta name="viewport" content="initial-scale=1" />
 
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="ng-onboarding/ng-onboarding.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 
 		<script type="text/javascript" src="app.js"></script>
 
 	</head>
 	<body ng-app="druge" ng-controller="main">
+		<onboarding-popover enabled="onboarding" steps="onboardingSteps"></onboarding-popover>
 		<nav class="navbar navbar-custom">
 		  	<div class="container-fluid">
 				<span class="navbar-brand">
 			  		<span class="pad-left-s">A Better Druge Report</span>
 				</span>
 
-		  		<a class="probity pull-right" target="_blank" href="http://www.probitytechnology.com">
+		  		<span class="rhsLink pull-right">
 					Probity Technology
+		  		</span>
+
+		  		<a class="rhsLink pull-right animated tada" target="_blank" href="http://www.probitytechnology.com" data-toggle="modal" data-target="#onBoarding">
+					About
 		  		</a>
+
 	    	</div>
 	    </nav>
 
-		<div class="container-fluid">
+		<div ng-cloak class="container-fluid">
 			<div class="row">
 				<div class="col-xs-4 h100 scrollY">
 					
-					<section class="sidebar">
+					<section id="sidebar">
 						<div class="row">
 							<div class="col-sm-12 storyListData pad-top-s pad-bottom-s">
-								<i class="fa fa-refresh pointer"
+								<i id="refreshButton" class="fa fa-refresh pointer"
 									ng-click="loadStories()"
 								></i>
 								<span class="pull-right">{{stories.length}} stories listed</span>
@@ -56,7 +66,7 @@
 						<div class="row activeTitle">
 							<div class="col-sm-12 pad-bottom-s">
 								<h4>{{active.title}}</h4>
-								<a target="_blank" ng-href="{{active.link}}"><i class="fa fa-external-link pad-right-s"></i>{{active.link}}</a>
+								<a id="sourceLink" target="_blank" ng-href="{{active.link}}"><i class="fa fa-external-link pad-right-s"></i>{{active.link}}</a>
 							</div>
 						</div>
 							<div class="col-sm-12">
@@ -81,9 +91,45 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
+
+		<div class="modal fade" id="onBoarding" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Welcome</h4>
+		      </div>
+		      <div class="modal-body">
+		        Thanks for swinging By! 
+		        Choose what you would like to know: 
+		        <ul>
+		        	<li>A quick overview of what this site is OR</li>
+		        	<li>A detailed breakdown of the technical details that makes this site tick</li>
+		        </ul>
+		      </div>
+		      <div class="modal-footer text-center-modal-buttons">
+		      	<button type="button" class="btn btn-primary" data-dismiss="modal"
+		      		ng-click="startOnboarding()">
+		      		Quick Guide
+		      	</button>
+		      	<a href="https://github.com/Rece/drudge" class="btn btn-primary">Nerdy Details</a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-69555676-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 	</body>
 </html>

@@ -43,19 +43,22 @@ h3,
   .navbar a:visited,
   .navbar a:focus {
     color: white; }
-  .navbar .probity {
-    padding: 15px; }
+  .navbar .rhsLink {
+    padding: 8px;
+    margin: 7px;
+    border: 1px solid white;
+    border-radius: 2px; }
   .navbar .drudge {
     font-size: 18px;
     padding: 12px; }
 
-.sidebar .storyListData {
+#sidebar .storyListData {
   color: white;
   background-color: #2e4952; }
-.sidebar .storyTitle {
+#sidebar .storyTitle {
   border-bottom: 1px solid #ccc;
   color: rgba(0, 0, 0, 0.6); }
-  .sidebar .storyTitle.selected {
+  #sidebar .storyTitle.selected {
     border-left: 5px solid #6787a2;
     padding-left: 10px;
     color: black; }
@@ -79,3 +82,8 @@ h3,
   font-size: 50px;
   margin: 20px auto;
   color: #6787a2; }
+
+#onBoarding .text-center-modal-buttons {
+  text-align: center; }
+#onBoarding .btn-primary {
+  background-color: #6787a2; }

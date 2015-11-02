@@ -1,14 +1,43 @@
-/* globals angular, alert*/
+/* globals angular, alert, console*/
 
 var rss = "http://www.drudgereportfeed.com/rss.xml";
 var contentSource = "http://localhost:3000/";
-var app = angular.module('druge', []);
+var app = angular.module('druge', ['ngOnboarding']);
 
 app.controller('main', [
 	'$scope',
 	'$http',
 	'$sce',
 	function($scope, $http, $sce){
+		$scope.onboarding = false;
+		$scope.onboardingSteps = [
+			{
+			    title: "News Story Feed",
+			    position: "right",
+			    description: "Here you will find a list of all of the news stories that Druge Report has linked to.",
+			    attachTo: "#sidebar",
+			    width:300
+			},
+			{
+				title: "Article",
+			    position: "left",
+			    description: "Over here you will see the news article. Notice it is just the article itself, not any of the other content that gets in the way!",
+			    attachTo: "#article",
+			    width:300
+			},
+			{
+				title: "Article Link",
+			    position: "bottom",
+			    description: "If the article doesn't load correctly, you can always click the source link located here",
+			    attachTo: "#sourceLink",
+			    width:300
+			}
+		];
+		$scope.startOnboarding = function() {
+			$scope.onboarding = true;
+			console.log("started");
+		};
+
 		$scope.loadStories = function() {
 			$http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(rss))
 				.success(function(data){
