@@ -1,3 +1,3 @@
 #TODOs
-[ ] add way more article styling
-[ ] write a really good readme
+ * add way more article styling
+ * write a really good readme
