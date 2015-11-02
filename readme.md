@@ -6,6 +6,7 @@ There is a news curation site called [Drudge Report](http://www.drudgereport.com
  * This is a MEAN(ish) site. 
  * We have an angular front end.
  * Bootstrap for our css framework. 
+ * My custom css is written in sass
  * There is one little css animation that I'm pulling from [animate.css](https://daneden.github.io/animate.css/).
  * There are a couple of [font awesome](https://fortawesome.github.io/Font-Awesome/) icons in here as well.
  * I'm using [ng-onboarding](https://github.com/adamalbrecht/ngOnboarding) for my onboarding tutorial.
